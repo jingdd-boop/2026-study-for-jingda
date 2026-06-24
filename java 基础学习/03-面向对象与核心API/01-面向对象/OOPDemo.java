@@ -6,8 +6,8 @@ public class OOPDemo {
 
     public static void main(String[] args) {
         System.out.println("===== 封装 =====");
-        Person person = new Person("张三", 25);
-        person.setAge(26);
+        Person person = new Person("张三", 25);  // 构造器创建对象
+        person.setAge(26);  // 封装：通过 setter 修改 private 字段，内部可校验
         System.out.println(person.getInfo());
 
         System.out.println("\n===== 继承与多态 =====");
@@ -36,28 +36,37 @@ public class OOPDemo {
 }
 
 // --- 封装 ---
+// Person 类：演示「封装」—— 字段 private，对外通过方法访问
 class Person {
-    private String name;
+    // 实例字段：每个 Person 对象各有一份
+    private String name;   // private：类外不能直接访问，只能走 getter/setter
     private int age;
+
+    // 静态字段：属于类本身，所有 Person 对象共享这一份
     private static int count = 0;
 
+    // 构造方法：new Person("张三", 25) 时自动调用，用来初始化对象
     Person(String name, int age) {
-        this.name = name;
+        this.name = name;  // this.name 指当前对象的字段；参数 name 是传入的值
         this.age = age;
-        count++;
+        count++;           // 每创建一个 Person，计数 +1
     }
 
+    // getter：读取 private 字段（只读访问）
     String getName() { return name; }
     int getAge() { return age; }
 
+    // setter：修改 private 字段，可在方法内做校验（封装的好处）
     void setAge(int age) {
-        if (age > 0) this.age = age;
+        if (age > 0) this.age = age;  // 参数 age 与字段 this.age 同名，必须用 this 区分
     }
 
+    // 实例方法：把多个字段拼成可读字符串
     String getInfo() {
         return name + ", " + age + " 岁";
     }
 
+    // 静态方法：通过 Person.getCount() 调用，不需要创建对象
     static int getCount() { return count; }
 }
 
@@ -123,16 +132,18 @@ interface Swimmable {
     void swim();
 }
 
+// 实现接口 Flyable：承诺提供 fly() 方法（类只能单继承，但可实现多个接口）
 class Bird implements Flyable {
-    private final String name;
+    private final String name;  // final：构造后不可再改
     Bird(String name) { this.name = name; }
 
-    @Override
+    @Override  // 实现接口中声明的方法，必须加 public（接口方法默认 public）
     public void fly() {
         System.out.println(name + " 在飞翔");
     }
 }
 
+// 同时实现两个接口：既能飞又能游（Java 支持多接口实现）
 class Duck implements Flyable, Swimmable {
     private final String name;
     Duck(String name) { this.name = name; }

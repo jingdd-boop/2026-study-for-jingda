@@ -1,0 +1,25 @@
+# Java 编译产物
+*.class
+*.jar
+*.war
+*.ear
+out/
+target/
+build/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+
+# macOS
+.DS_Store
+
+# 日志与临时文件
+*.log
+*.tmp
