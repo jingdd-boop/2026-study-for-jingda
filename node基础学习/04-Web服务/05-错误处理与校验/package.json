@@ -1,0 +1,13 @@
+{
+  "name": "express-validation-demo",
+  "version": "1.0.0",
+  "description": "Express 错误处理与参数校验 Demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "express-validator": "^7.2.0"
+  }
+}

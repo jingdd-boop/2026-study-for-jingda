@@ -30,4 +30,5 @@ coverage/
 **/stream-output/
 06-实践练习/**/data/
 06-实践练习/**/uploads/
+04-Web服务/**/uploads/
 03-异步编程/**/demo-data.txt
