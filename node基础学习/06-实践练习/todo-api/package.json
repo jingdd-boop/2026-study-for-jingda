@@ -1,0 +1,13 @@
+{
+  "name": "todo-api",
+  "version": "1.0.0",
+  "description": "Todo REST API 实践 — 数据持久化到 JSON",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

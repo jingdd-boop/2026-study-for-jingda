@@ -1,0 +1,23 @@
+{
+  "name": "node-learning-example",
+  "version": "1.0.0",
+  "description": "package.json 字段示例 — 见 README.md",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "echo \"示例：这里可以跑 jest/vitest\""
+  },
+  "keywords": ["node", "learning"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

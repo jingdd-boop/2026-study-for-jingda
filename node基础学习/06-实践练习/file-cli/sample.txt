@@ -1,0 +1,1 @@
+Node.js CLI Demo — 用 file-cli read sample.txt 读取本文件

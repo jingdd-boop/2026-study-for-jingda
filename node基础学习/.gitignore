@@ -1,0 +1,33 @@
+# 依赖
+node_modules/
+.npm-cache/
+
+# 环境变量（可能含密钥）
+.env
+.env.local
+
+# 日志与临时文件
+*.log
+npm-debug.log*
+*.tmp
+
+# 运行时产物
+dist/
+build/
+coverage/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Demo 运行时生成的文件
+**/demo-output/
+**/stream-output/
+06-实践练习/**/data/
+06-实践练习/**/uploads/
+03-异步编程/**/demo-data.txt

@@ -1,0 +1,13 @@
+{
+  "name": "express-demo",
+  "version": "1.0.0",
+  "description": "Express 入门 Demo",
+  "main": "express-demo.js",
+  "scripts": {
+    "start": "node express-demo.js",
+    "dev": "node express-demo.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
